@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "cover": "https://i.ibb.co/j66vbYt/1.jpg",
+    "autor_name": "Hamza",
+    "author_img": "https://i.ibb.co/51df1dQ/profile.png",
+    "title": "How to get your first job as a self-taught programmer",
+    "post_date": "4 december",
+    "reading_time": 5,
+    "tags": ["#beginners", "#programming"]
+  },
+  {
+    "id": 2,
+    "cover": "https://i.ibb.co/xShrSvx/2.png",
+    "autor_name": "Lisha",
+    "author_img": "https://i.ibb.co/51df1dQ/profile.png",
+    "title": "How to get your first job as a self-taught programmer",
+    "post_date": "4 oct",
+    "reading_time": 7,
+    "tags": ["beginners" ,"programming"]
+  },
+  {
+    "id": 3,
+    "cover": "https://i.ibb.co/PrgMwHR/3.png",
+    "autor_name": "Joe",
+    "author_img": "https://i.ibb.co/51df1dQ/profile.png",
+    "title": "How to get your first job as a self-taught programmer",
+    "post_date": "23 june",
+    "reading_time": 10,
+    "tags": ["#beginners", "#programming"]
+  }
+]
