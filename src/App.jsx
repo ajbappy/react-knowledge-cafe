@@ -9,6 +9,8 @@ import { getItem, setItemLS } from "./components/localStorage/localStorage";
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
 
+  const [readingTime, setReadingTime] = useState(0);
+
   useEffect(() => {
     const getStoredItems = getItem();
     setBookmarks(getStoredItems);
@@ -23,14 +25,22 @@ function App() {
     const newBookmark = [...bookmarks, title];
     setBookmarks(newBookmark);
   };
+
+  const handelReadingTime = (time) => {
+    const newTime = readingTime + time;
+    setReadingTime(newTime);
+  };
   return (
     <div className="max-w-[1280px] mx-auto px-5">
       {/* herader  */}
       <Header></Header>
       <hr />
       <main className="flex flex-col-reverse md:flex-row gap-5">
-        <Blogs handelBookmark={handelBookmark}></Blogs>
-        <Bookmark bookmarks={bookmarks}></Bookmark>
+        <Blogs
+          handelBookmark={handelBookmark}
+          handelReadingTime={handelReadingTime}
+        ></Blogs>
+        <Bookmark bookmarks={bookmarks} readingTime={readingTime}></Bookmark>
       </main>
     </div>
   );

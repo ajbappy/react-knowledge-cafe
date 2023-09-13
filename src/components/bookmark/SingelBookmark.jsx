@@ -5,7 +5,7 @@ const SingelBookmark = ({ bookmarkTitle }) => {
   //   console.log(bookmark);
   return (
     <div>
-      <h2 className="p-4 bg-slate-100 my-4 rounded-lg font-medium text-xl">
+      <h2 className="p-4  bg-white my-4 rounded-lg font-medium text-xl">
         {bookmarkTitle}
       </h2>
     </div>
