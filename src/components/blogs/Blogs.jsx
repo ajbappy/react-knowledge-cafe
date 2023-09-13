@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import Blog from "./blog";
+import PropTypes from "prop-types";
 
-const Blogs = () => {
+const Blogs = ({ handelBookmark }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("../../../public/blog.json");
+        const res = await fetch("blog.json");
 
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setBlogs(data);
       } catch (error) {
         console.log("system catch an error", error);
@@ -20,11 +21,15 @@ const Blogs = () => {
   }, []);
   return (
     <div className="w-full md:w-2/3">
-      {blogs.map((blogs) => (
-        <Blog key={Blogs.id} blogs={blogs}></Blog>
+      {blogs.map((blog) => (
+        <Blog key={blog.id} blogs={blog} handelBookmark={handelBookmark}></Blog>
       ))}
     </div>
   );
+};
+
+Blogs.propTypes = {
+  handelBookmark: PropTypes.func,
 };
 
 export default Blogs;
