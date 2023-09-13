@@ -37,7 +37,7 @@ const Blog = ({ blogs, handelBookmark, handelReadingTime }) => {
       ))}
       <br />
       <button
-        onClick={() => handelReadingTime(reading_time)}
+        onClick={() => handelReadingTime(title, reading_time)}
         className="text-blue-800 underline py-1"
       >
         Mark As Read

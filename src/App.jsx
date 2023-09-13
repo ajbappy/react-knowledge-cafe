@@ -26,10 +26,18 @@ function App() {
     setBookmarks(newBookmark);
   };
 
-  const handelReadingTime = (time) => {
+  const handelReadingTime = (title, time) => {
     const newTime = readingTime + time;
     setReadingTime(newTime);
+
+    const removeBookmark = bookmarks.filter(
+      (bookmarkTitle) => bookmarkTitle !== title
+    );
+    setBookmarks(removeBookmark);
   };
+
+  console.log(bookmarks);
+
   return (
     <div className="max-w-[1280px] mx-auto px-5">
       {/* herader  */}
